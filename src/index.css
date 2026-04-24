@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 160 20% 12%;
+
+    --card: 40 20% 97%;
+    --card-foreground: 160 20% 12%;
+
+    --popover: 40 20% 97%;
+    --popover-foreground: 160 20% 12%;
+
+    --primary: 163 33% 27%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 40 15% 90%;
+    --secondary-foreground: 160 20% 12%;
+
+    --muted: 40 10% 90%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 163 33% 27%;
+    --accent-foreground: 40 20% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 20% 97%;
+
+    --border: 40 10% 82%;
+    --input: 40 10% 82%;
+    --ring: 163 33% 27%;
+
+    --radius: 0.25rem;
+
+    /* CFH Brand tokens */
+    --cfh-teal: #2D5A52;
+    --cfh-white: #ffffff;
+    --cfh-paper: #F8F6F1;
+    --cfh-charcoal: #1C2B27;
+    --cfh-stone: #8A8070;
+  }
+
+  .dark {
+    --background: 160 25% 8%;
+    --foreground: 40 15% 92%;
+
+    --card: 160 20% 11%;
+    --card-foreground: 40 15% 92%;
+
+    --popover: 160 20% 11%;
+    --popover-foreground: 40 15% 92%;
+
+    --primary: 163 33% 55%;
+    --primary-foreground: 160 25% 8%;
+
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 40 15% 92%;
+
+    --muted: 160 15% 18%;
+    --muted-foreground: 40 10% 60%;
+
+    --accent: 163 33% 55%;
+    --accent-foreground: 160 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 15% 92%;
+
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 163 33% 55%;
+
+    /* CFH Brand tokens (dark) */
+    --cfh-teal: #4A8C80;
+    --cfh-white: #ffffff;
+    --cfh-paper: #1C2B27;
+    --cfh-charcoal: #F0EDE6;
+    --cfh-stone: #9BA89E;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}

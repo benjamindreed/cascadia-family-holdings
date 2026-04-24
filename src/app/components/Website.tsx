@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import { useTheme } from './ThemeProvider'
@@ -171,7 +171,6 @@ function Nav() {
 
 // ── Hero ──────────────────────────────────────────────────────────────────────
 function Hero() {
-  const navigate = useNavigate()
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-[var(--cfh-paper)] dark:bg-background overflow-hidden">
       {/* Subtle texture overlay */}
@@ -205,18 +204,18 @@ function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            onClick={() => navigate('/portfolio')}
+          <Link
+            to="/portfolio"
             className="px-8 py-3 bg-[var(--cfh-teal)] text-white text-sm tracking-widest uppercase font-sans hover:opacity-90 transition-opacity"
           >
             Explore Holdings
-          </button>
-          <button
-            onClick={() => navigate('/inquiries')}
+          </Link>
+          <Link
+            to="/inquiries"
             className="px-8 py-3 border border-foreground/20 text-foreground text-sm tracking-widest uppercase font-sans hover:border-foreground/40 transition-colors bg-transparent"
           >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 

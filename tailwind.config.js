@@ -41,8 +41,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        "cfh-teal": "var(--cfh-teal)",
-        "cfh-paper": "var(--cfh-paper)",
+        'cfh-teal': 'var(--cfh-teal)',
+        'cfh-paper': 'var(--cfh-paper)',
+        'cfh-charcoal': 'var(--cfh-charcoal)',
+        'cfh-stone': 'var(--cfh-stone)',
+        'cfh-white': 'var(--cfh-white)',
       },
       borderRadius: {
         lg: "var(--radius)",

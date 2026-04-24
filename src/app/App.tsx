@@ -1,15 +1,17 @@
-import { BrowserRouter } from 'react-router-dom'
+import { RouterProvider, Outlet } from 'react-router-dom'
 import { ThemeProvider } from './components/ThemeProvider'
-import { AppRoutes } from './routes'
+import { Nav } from './components/Nav'
+import { router } from './routes'
 
-function App() {
+export function Layout() {
   return (
-    <BrowserRouter>
-      <ThemeProvider>
-        <AppRoutes />
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider>
+      <Nav />
+      <Outlet />
+    </ThemeProvider>
   )
 }
 
-export default App
+export default function App() {
+  return <RouterProvider router={router} />
+}

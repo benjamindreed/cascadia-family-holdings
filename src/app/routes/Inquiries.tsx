@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 type FormState = 'idle' | 'loading' | 'success' | 'error';
 
-interface FormData {
+interface InquiryFormData {
   name: string;
   email: string;
   subject: string;
@@ -12,7 +12,7 @@ interface FormData {
 export default function Inquiries() {
   const [state, setState] = useState<FormState>('idle');
   const [errorMsg, setErrorMsg] = useState('');
-  const [form, setForm] = useState<FormData>({
+  const [form, setForm] = useState<InquiryFormData>({
     name: '',
     email: '',
     subject: '',

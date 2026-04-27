@@ -28,6 +28,9 @@
     "resend": "^6.12.2",
     "tailwind-merge": "^2.2.0"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260426.1",
     "@types/react": "^18.2.15",

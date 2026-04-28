@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,92 +8,110 @@
   :root {
     --background: 40 20% 97%;
     --foreground: 160 20% 12%;
-
     --card: 40 20% 97%;
     --card-foreground: 160 20% 12%;
-
     --popover: 40 20% 97%;
     --popover-foreground: 160 20% 12%;
-
     --primary: 163 33% 27%;
     --primary-foreground: 40 20% 97%;
-
     --secondary: 40 15% 90%;
     --secondary-foreground: 160 20% 12%;
-
     --muted: 40 10% 90%;
     --muted-foreground: 160 10% 45%;
-
     --accent: 163 33% 27%;
     --accent-foreground: 40 20% 97%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 20% 97%;
-
     --border: 40 10% 82%;
     --input: 40 10% 82%;
     --ring: 163 33% 27%;
-
     --radius: 0.25rem;
 
-    /* CFH Brand tokens */
-    --cfh-teal: #2D5A52;
+    /* CFH Brand tokens — light mode */
+    --cfh-paper: #F7F6F2;
+    --cfh-paper-alt: #EFEDE6;
     --cfh-white: #ffffff;
-    --cfh-paper: #F8F6F1;
-    --cfh-charcoal: #1C2B27;
-    --cfh-stone: #8A8070;
+    --cfh-ink: #0E2A2D;
+    --cfh-ink-soft: #1C3A3D;
+    --cfh-ink-mute: #4A5E60;
+    --cfh-teal: #2E5F66;
+    --cfh-teal-light: #6B8F92;
+    --cfh-stone: #B8BBB4;
+    --cfh-stone-light: #D8DAD5;
+    --cfh-stone-dark: #7A7E77;
+    --cfh-moss: #8A9A7E;
+    /* legacy aliases */
+    --cfh-charcoal: var(--cfh-ink);
+    --cfh-serif: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+    --cfh-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    --cfh-mono: 'JetBrains Mono', ui-monospace, monospace;
   }
 
   .dark {
     --background: 160 25% 8%;
     --foreground: 40 15% 92%;
-
     --card: 160 20% 11%;
     --card-foreground: 40 15% 92%;
-
     --popover: 160 20% 11%;
     --popover-foreground: 40 15% 92%;
-
     --primary: 163 33% 55%;
     --primary-foreground: 160 25% 8%;
-
     --secondary: 160 15% 18%;
     --secondary-foreground: 40 15% 92%;
-
     --muted: 160 15% 18%;
     --muted-foreground: 40 10% 60%;
-
     --accent: 163 33% 55%;
     --accent-foreground: 160 25% 8%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 40 15% 92%;
-
     --border: 160 15% 20%;
     --input: 160 15% 20%;
     --ring: 163 33% 55%;
 
-    /* CFH Brand tokens (dark) */
-    --cfh-teal: #4A8C80;
-    --cfh-white: #ffffff;
-    --cfh-paper: #1C2B27;
-    --cfh-charcoal: #F0EDE6;
-    --cfh-stone: #9BA89E;
+    /* CFH Brand tokens — dark mode */
+    --cfh-paper: #121A1A;
+    --cfh-paper-alt: #182626;
+    --cfh-white: #0A1111;
+    --cfh-ink: #ffffff;
+    --cfh-ink-soft: #EAE6DF;
+    --cfh-ink-mute: #A9B1AD;
+    --cfh-teal: #4FB0B8;
+    --cfh-teal-light: #8DC4C8;
+    --cfh-stone: #4A5E60;
+    --cfh-stone-light: #25383A;
+    --cfh-stone-dark: #9AA19D;
+    --cfh-moss: #A4B895;
+    --cfh-charcoal: var(--cfh-ink);
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     margin: 0;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: var(--cfh-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: var(--cfh-serif);
   }
+}
+
+/* CFH typography utilities */
+.cfh-art {
+  font-family: var(--cfh-serif);
+  font-feature-settings: "kern", "liga", "calt", "ss01";
+  font-weight: 400;
+}
+
+.cfh-caps {
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-family: var(--cfh-sans);
 }

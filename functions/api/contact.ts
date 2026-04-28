@@ -33,18 +33,18 @@ export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
     return json({ error: 'Email service not configured.' }, 500);
   }
 
-  const { name, email, subject, message } = body as ContactBody;
+  const { firstName, lastName, email, message } = body as ContactBody;
+  const fullName = `${firstName} ${lastName}`;
 
   try {
     const resend = new Resend(env.RESEND_API_KEY);
     await resend.emails.send({
       from: 'Cascadia Family Holdings <onboarding@resend.dev>',
       to: 'benjamin.reed@gmail.com',
-      subject: `CFH Inquiry: ${subject}`,
+      subject: `CFH Inquiry from ${fullName}`,
       html: `
         <h2>New Inquiry — Cascadia Family Holdings</h2>
-        <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>From:</strong> ${fullName} &lt;${email}&gt;</p>
         <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
       `,
     });

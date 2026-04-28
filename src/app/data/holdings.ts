@@ -1,38 +1,38 @@
 export interface Holding {
   id: number
-  label: string
   name: string
   description: string
-  founded: string
-  region: string
+  logo: string
+  sector: string
+  status: string
 }
 
 export const holdings: Holding[] = [
   {
     id: 1,
-    label: 'Real Estate',
-    name: 'Pacific Crest Properties',
+    name: 'Eco Car Cafe',
     description:
-      'A diversified Pacific Northwest real estate portfolio spanning commercial, mixed-use, and residential assets with long-duration leases and conservative leverage.',
-    founded: '2004',
-    region: 'Pacific Northwest',
+      'PNW premier auto care provider and only organic all natural detailer. Full service auto care including detailing, maintenance plans, coatings, tint, and paint protection film.',
+    logo: '/eco.png',
+    sector: 'Consumer',
+    status: 'Active Holding',
   },
   {
     id: 2,
-    label: 'Consumer',
-    name: 'Ridgeline Provisions',
+    name: 'Sara Jolie Skincare',
     description:
-      'A premium outdoor and culinary brand with deep roots in the Pacific Northwest, serving discerning consumers who value craft, provenance, and lasting quality.',
-    founded: '2011',
-    region: 'North America',
+      'Handmade natural skincare that your body craves. 100% chemical and preservative free, sourced from plant derived, non-GMO, organic ingredients.',
+    logo: '/sarajolie.jpg',
+    sector: 'Consumer',
+    status: 'Active Holding',
   },
   {
     id: 3,
-    label: 'Technology',
-    name: 'Watershed Analytics',
+    name: 'Atsignhandle LLC',
     description:
-      'An environmental intelligence platform delivering data-driven insights for sustainable resource management across municipal and enterprise clients.',
-    founded: '2017',
-    region: 'Global',
+      'Boutique software firm specializing in custom application development of DeFi tooling and agentic solutions.',
+    logo: '/atsignhandle.jpg',
+    sector: 'Technology',
+    status: 'Active Holding',
   },
 ]

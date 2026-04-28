@@ -4,33 +4,12 @@ import { useState, useEffect } from 'react'
 import { useTheme } from './ThemeProvider'
 import { cn } from '../lib/utils'
 
-function CascadiaLogo({ className }: { className?: string }) {
+function CascadiaLogo() {
   return (
-    <svg
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      {/* Mountain silhouette */}
-      <path
-        d="M24 6L40 36H8L24 6Z"
-        fill="currentColor"
-        opacity="0.85"
-      />
-      {/* Secondary peak */}
-      <path
-        d="M13 36L22 20L31 36H13Z"
-        fill="currentColor"
-        opacity="0.5"
-      />
-      {/* Evergreen tree suggestion at base */}
-      <path
-        d="M24 28L27 36H21L24 28Z"
-        fill="currentColor"
-        opacity="0.3"
-      />
+    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M20 10L32 30H8L20 10Z" fill="var(--cfh-moss)" fillOpacity="0.8"/>
+      <path d="M12 16L20 30H4L12 16Z" fill="var(--cfh-teal)" fillOpacity="0.9"/>
+      <path d="M28 16L36 30H20L28 16Z" fill="var(--cfh-ink)" fillOpacity="0.9"/>
     </svg>
   )
 }
@@ -49,22 +28,20 @@ export function Nav() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled
-          ? 'bg-background/95 backdrop-blur-sm border-b border-border shadow-sm'
-          : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[var(--cfh-white)]/95 backdrop-blur-md border-b border-[var(--cfh-stone-light)]',
+        scrolled ? 'shadow-sm' : ''
       )}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Wordmark */}
           <Link to="/" className="flex items-center gap-3 group">
-            <CascadiaLogo className="w-8 h-8 text-[var(--cfh-teal)] flex-shrink-0" />
+            <CascadiaLogo />
             <div className="flex flex-col leading-none">
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground/90 font-sans">
-                Cascadia
+              <span className="cfh-art text-xl leading-none text-[var(--cfh-ink)] tracking-tight">
+                CASCADIA
               </span>
-              <span className="text-xs tracking-[0.15em] uppercase text-foreground/60 font-sans">
+              <span className="cfh-caps text-[8px] text-[var(--cfh-teal)] tracking-wider">
                 Family Holdings
               </span>
             </div>

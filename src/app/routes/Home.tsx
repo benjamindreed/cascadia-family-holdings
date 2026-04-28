@@ -26,9 +26,9 @@ const principles = [
 function Hero() {
   return (
     <section className="relative py-28 md:py-40 lg:py-52 px-6 flex items-center justify-center min-h-[75vh] border-b border-[var(--cfh-stone-light)] overflow-hidden">
-      {/* Background image */}
+      {/* Background image — low opacity so text stays readable */}
       <div
-        className="absolute inset-0 z-0 opacity-80 mix-blend-multiply grayscale"
+        className="absolute inset-0 z-0 opacity-25 grayscale"
         style={{
           backgroundImage:
             'url("https://images.unsplash.com/photo-1703226313127-0dff2ff95f0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixlib=rb-4.1.0&q=80&w=1080")',
@@ -37,8 +37,7 @@ function Hero() {
         }}
       />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 z-0 bg-[var(--cfh-white)]/40" />
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[var(--cfh-white)]/10 to-[var(--cfh-paper)] opacity-90" />
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-[var(--cfh-white)]/60 to-[var(--cfh-paper)]" />
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h1 className="cfh-art text-5xl md:text-7xl mb-8 leading-tight text-[var(--cfh-ink)]">

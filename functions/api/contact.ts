@@ -29,10 +29,14 @@ export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
     return json({ error: validationError }, 400);
   }
 
+  if (!env.RESEND_API_KEY) {
+    return json({ error: 'Email service not configured.' }, 500);
+  }
+
   const { name, email, subject, message } = body as ContactBody;
-  const resend = new Resend(env.RESEND_API_KEY);
 
   try {
+    const resend = new Resend(env.RESEND_API_KEY);
     await resend.emails.send({
       from: 'Cascadia Family Holdings <onboarding@resend.dev>',
       to: 'benjamin.reed@gmail.com',

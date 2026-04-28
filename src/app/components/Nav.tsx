@@ -6,10 +6,11 @@ import { cn } from '../lib/utils'
 
 function CascadiaLogo() {
   return (
-    <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M20 10L32 30H8L20 10Z" fill="var(--cfh-moss)" fillOpacity="0.8"/>
-      <path d="M12 16L20 30H4L12 16Z" fill="var(--cfh-teal)" fillOpacity="0.9"/>
-      <path d="M28 16L36 30H20L28 16Z" fill="var(--cfh-ink)" fillOpacity="0.9"/>
+    <svg viewBox="0 0 200 130" className="h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 12 118 L 60 42 L 78 70 L 46 118 Z" fill="#8A9A7E" />
+      <path d="M 92 118 L 140 48 L 196 118 Z" fill="#2E5F66" />
+      <path d="M 40 118 L 96 18 L 110 38 L 108 52 L 118 44 L 152 118 Z" fill="#0E2A2D" />
+      <path d="M 50 118 L 78 70 L 88 88 L 66 118 Z" fill="#0E2A2D" opacity="0.55" />
     </svg>
   )
 }

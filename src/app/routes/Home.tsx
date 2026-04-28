@@ -155,7 +155,11 @@ function Footer() {
     <footer className="bg-[var(--cfh-ink)] text-[var(--cfh-white)] py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <span className="cfh-art text-2xl text-white">CFH</span>
+          <svg viewBox="0 0 200 130" className="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 12 118 L 60 42 L 78 70 L 46 118 Z" fill="#FDFCF9" />
+            <path d="M 92 118 L 140 48 L 196 118 Z" fill="#FDFCF9" />
+            <path d="M 40 118 L 96 18 L 110 38 L 108 52 L 118 44 L 152 118 Z" fill="#FDFCF9" />
+          </svg>
           <div className="h-6 w-px bg-[var(--cfh-stone-dark)]" />
           <span className="text-sm text-[var(--cfh-stone)]">
             © {new Date().getFullYear()} Cascadia Family Holdings

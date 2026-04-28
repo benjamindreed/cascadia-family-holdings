@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Cascadia Family Holdings — Favicon</title>
+  <rect width="64" height="64" rx="10" fill="#F7F6F2"></rect>
+  <g transform="translate(4, 8) scale(0.28)">
+    <path d="M 12 118 L 60 42 L 78 70 L 46 118 Z" fill="#8A9A7E"></path>
+    <path d="M 92 118 L 140 48 L 196 118 Z" fill="#2E5F66"></path>
+    <path d="M 40 118 L 96 18 L 110 38 L 108 52 L 118 44 L 152 118 Z" fill="#0E2A2D"></path>
+    <path d="M 50 118 L 78 70 L 88 88 L 66 118 Z" fill="#0E2A2D" opacity="0.55"></path>
+  </g>
+</svg>

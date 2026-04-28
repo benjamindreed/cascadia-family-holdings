@@ -12,7 +12,7 @@ export const holdings: Holding[] = [
     id: 1,
     name: 'Eco Car Cafe',
     description:
-      'PNW premier auto care provider and only organic all natural detailer. Full service auto care including detailing, maintenance plans, coatings, tint, and paint protection film.',
+      'PNW premier auto care provider and the nations only organic, all natural, carbon neutral auto detailer. Full service auto care including detailing, maintenance plans, coatings, tint, and paint protection film.',
     logo: '/eco.png',
     sector: 'Consumer',
     status: 'Active Holding',

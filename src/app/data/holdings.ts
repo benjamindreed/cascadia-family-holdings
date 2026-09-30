@@ -35,4 +35,22 @@ export const holdings: Holding[] = [
     sector: 'Technology',
     status: 'Active Holding',
   },
+  {
+    id: 4,
+    name: 'Reed Vault Collectibles',
+    description:
+      'Family-run collectibles business dealing in trading cards, comics, and memorabilia. Four siblings curating the best finds — honest grading, ships in three days, 30-day returns, no questions asked.',
+    logo: '/reedvault.svg',
+    sector: 'Consumer',
+    status: 'Active Holding',
+  },
+  {
+    id: 5,
+    name: 'Procedura Systems',
+    description:
+      'Publisher of premium operating systems for professional practices — trades contractors, transaction coordinators, med-spa operators, and local service businesses. Tiered tools from standalone task templates to AI-agent workflow systems.',
+    logo: '/procedura.svg',
+    sector: 'Technology',
+    status: 'Active Holding',
+  },
 ]
